@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    user-select: none;
+}
+
+.container {
+    padding: 10px;
+}
+
+.interface {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #ebebeb;
+}
+
+.interface .input {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 2px solid #1e88e5;
+}
+
+.input input:focus {
+    outline: none;
+}
+
+.input button {
+    padding: 0 15px;
+    background-color: #1e88e5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input .error-message {
+    display: none;
+    width: 100%;
+    font-size: 14px;
+    color: #ff0000;
+    margin-top: 10px;
+}
+
+.input .error-message.active {
+    display: block;
+}
+
+.interface .all-tasks {
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.all-tasks .task-box {
+    display: flex;
+    align-items: center;
+    background-color: #ececec;
+    padding: 10px;
+}
+
+.all-tasks .task-box:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.all-tasks .done-tasks, .all-tasks .running-tasks {
+    position: relative;
+} 
+
+.all-tasks .done-tasks {
+    margin-top: 30px;
+}
+
+.all-tasks .running-tasks {
+    margin-top: 40px;
+}
+
+.all-tasks .done-tasks::before, .all-tasks .running-tasks::before {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.all-tasks .done-tasks::before {
+    content: "Done Tasks";
+    background-color: #b71c1c;
+}
+
+.all-tasks .running-tasks::before {
+    content: "Running Tasks";
+    background-color: #43a047;
+}
+
+.task-box .task-content {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.task-box .task-btn {
+    width: 60px;
+    padding: 5px 0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.done-tasks .task-btn {
+    background-color: #b71c1c;
+}
+
+.running-tasks .task-btn {
+    background-color: #43a047;
+}
+
+.empty-task {
+    display: none;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ebebeb;
+}
+
+.empty-task.active {
+    display: block;
+}
